@@ -53,3 +53,39 @@ h1, h2 {
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
+
+/* hero image */
+
+#hero-outer {
+    height: 600px;
+    width: 100%;
+
+    /* masks off edges of resized image for zoom */
+    overflow: hidden;
+}
+
+#hero-image {
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image-lr.webp") no-repeat center center;
+
+    /* animates zoom on page load */
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    
+    /* retains state of animation at last keyframe */
+    animation-fill-mode: forwards; 
+}
+
+/* creates level of zoom for hero image */
+/*animation is defined using keyframes rule followed by animation name of your own choosing */
+
+@keyframes hero-zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        /* zooms to 110% */
+        transform: scale(1.1); 
+    }
+}
