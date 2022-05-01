@@ -296,6 +296,14 @@ footer {
         padding: 0;
     }
 
+    #times > div {
+        width: 100%;
+        /* stack times vertically */
+        clear: both;
+        height: 150px;
+        padding: 0;
+    }
+
     hr {
         display: none;
     }
